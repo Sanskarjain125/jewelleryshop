@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Rings – Shop 22K & 18K Gold Rings | Swarnaveda</title>
+  <meta name="description" content="Browse 100+ exquisite 22K and 18K gold rings. BIS hallmarked, free shipping above ₹25,000. Shop rings for daily wear, festive occasions and weddings.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #3d3025 100%);
+      padding: var(--space-12) 0;
+      margin-bottom: var(--space-8);
+    }
+    .page-hero-inner { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-6); }
+    .page-hero h1 { color: var(--white); font-size: 2.5rem; margin-bottom: var(--space-2); }
+    .page-hero p { color: rgba(255,255,255,0.6); }
+    .breadcrumb { margin: 0; }
+    .breadcrumb-item a, .breadcrumb-sep { color: rgba(255,255,255,0.5); }
+    .breadcrumb-item.active { color: var(--gold-300); }
+    .listing-page { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-6) var(--space-16); }
+    .filter-tag.selected-purity { background: var(--gold-100); color: var(--gold-600); border-color: var(--gold-200); }
+    .range-values { display: flex; justify-content: space-between; font-size: var(--text-xs); color: var(--text-muted); margin-top: var(--space-2); }
+  </style>
+</head>
+<body>
+  <div id="shared-header"></div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <span class="breadcrumb-item"><a href="../index.html">Home</a></span>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-item"><a href="#">Gold</a></span>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-item active" id="category-breadcrumb">Rings</span>
+      </nav>
+      <h1 id="page-title">Gold Rings</h1>
+      <p id="page-desc">Exquisitely crafted 22K and 18K gold rings for every occasion. All BIS hallmarked and certified.</p>
+    </div>
+  </div>
+
+  <main class="listing-page">
+    <!-- Active Filters -->
+    <div class="active-filters" id="active-filters"></div>
+
+    <div class="listing-layout">
+      <!-- Filter Sidebar (Desktop) -->
+      <aside class="filter-sidebar" id="filter-sidebar" aria-label="Filters">
+        <div class="filter-header">
+          <div class="filter-title">Filters</div>
+          <button class="filter-clear" onclick="clearFilters()">Clear All</button>
+        </div>
+
+        <!-- Category -->
+        <div class="filter-section open">
+          <button class="filter-section-btn" aria-expanded="true">
+            Category
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="filter-option"><label><input type="checkbox" value="rings"> Rings</label><span class="filter-count">124</span></div>
+            <div class="filter-option"><label><input type="checkbox" value="earrings"> Earrings</label><span class="filter-count">89</span></div>
+            <div class="filter-option"><label><input type="checkbox" value="necklaces"> Necklaces</label><span class="filter-count">67</span></div>
+            <div class="filter-option"><label><input type="checkbox" value="bangles"> Bangles</label><span class="filter-count">58</span></div>
+            <div class="filter-option"><label><input type="checkbox" value="pendants"> Pendants</label><span class="filter-count">43</span></div>
+            <div class="filter-option"><label><input type="checkbox" value="mangalsutra"> Mangalsutra</label><span class="filter-count">31</span></div>
+          </div>
+        </div>
+
+        <!-- Gold Purity -->
+        <div class="filter-section open">
+          <button class="filter-section-btn">
+            Gold Purity
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="purity-chips">
+              <button class="purity-chip" onclick="togglePurityFilter(this,'14K')">14K</button>
+              <button class="purity-chip selected" onclick="togglePurityFilter(this,'18K')">18K</button>
+              <button class="purity-chip selected" onclick="togglePurityFilter(this,'22K')">22K</button>
+              <button class="purity-chip" onclick="togglePurityFilter(this,'24K')">24K</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Range -->
+        <div class="filter-section open">
+          <button class="filter-section-btn">
+            Price Range
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="price-range">
+              <input type="range" class="range-slider" min="0" max="500000" value="200000" step="5000" id="price-range" oninput="updatePriceRange(this.value)">
+              <div class="range-values">
+                <span>₹0</span>
+                <span id="price-max-label">Up to ₹2,00,000</span>
+              </div>
+              <div class="price-inputs">
+                <input type="text" class="price-input" value="0" placeholder="Min" id="min-price">
+                <span class="price-sep">–</span>
+                <input type="text" class="price-input" value="2,00,000" placeholder="Max" id="max-price">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="filter-section open">
+          <button class="filter-section-btn">
+            Gender
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="filter-option"><label><input type="radio" name="gender" value="women"> Women</label></div>
+            <div class="filter-option"><label><input type="radio" name="gender" value="men"> Men</label></div>
+            <div class="filter-option"><label><input type="radio" name="gender" value="kids"> Kids</label></div>
+            <div class="filter-option"><label><input type="radio" name="gender" value="unisex"> Unisex</label></div>
+          </div>
+        </div>
+
+        <!-- Stone Type -->
+        <div class="filter-section">
+          <button class="filter-section-btn">
+            Stone Type
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="filter-option"><label><input type="checkbox"> Diamond</label></div>
+            <div class="filter-option"><label><input type="checkbox"> Ruby</label></div>
+            <div class="filter-option"><label><input type="checkbox"> Emerald</label></div>
+            <div class="filter-option"><label><input type="checkbox"> Pearl</label></div>
+            <div class="filter-option"><label><input type="checkbox"> No Stone</label></div>
+          </div>
+        </div>
+
+        <!-- Occasion -->
+        <div class="filter-section">
+          <button class="filter-section-btn">
+            Occasion
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="filter-option"><label><input type="checkbox"> Wedding</label></div>
+            <div class="filter-option"><label><input type="checkbox"> Daily Wear</label></div>
+            <div class="filter-option"><label><input type="checkbox"> Festive</label></div>
+            <div class="filter-option"><label><input type="checkbox"> Party</label></div>
+          </div>
+        </div>
+
+        <!-- Rating -->
+        <div class="filter-section">
+          <button class="filter-section-btn">
+            Rating
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="filter-option"><label><input type="radio" name="rating"> ★★★★★ 5</label></div>
+            <div class="filter-option"><label><input type="radio" name="rating"> ★★★★☆ 4 & above</label></div>
+            <div class="filter-option"><label><input type="radio" name="rating"> ★★★☆☆ 3 & above</label></div>
+          </div>
+        </div>
+
+        <!-- Vendor -->
+        <div class="filter-section">
+          <button class="filter-section-btn">
+            Vendor
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="filter-option"><label><input type="checkbox"> Raj Jewellers</label><span class="filter-count">128</span></div>
+            <div class="filter-option"><label><input type="checkbox"> Srinivas Gold House</label><span class="filter-count">89</span></div>
+            <div class="filter-option"><label><input type="checkbox"> Padmavathi Jewels</label><span class="filter-count">62</span></div>
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="filter-section">
+          <button class="filter-section-btn">
+            Availability
+            <svg class="filter-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="filter-section-content">
+            <div class="filter-option"><label><input type="checkbox"> In Stock Only</label></div>
+            <div class="filter-option"><label><input type="checkbox"> Include Out of Stock</label></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="listing-content">
+        <!-- Listing Header -->
+        <div class="listing-header">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <button class="mobile-filter-btn" onclick="toggleFilterSheet()">
+              <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="10" y2="18"/></svg>
+              Filters
+            </button>
+            <div class="listing-count">
+              Showing <strong id="product-count">8</strong> Products
+            </div>
+          </div>
+
+          <div class="listing-sort">
+            <span class="sort-label">Sort By:</span>
+            <select class="sort-select" id="sort-select" onchange="sortProducts(this.value)">
+              <option value="featured">Featured</option>
+              <option value="newest">Newest First</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Best Rated</option>
+            </select>
+            <div class="view-toggle">
+              <button class="view-btn active" id="grid-view-btn" onclick="setView('grid')" title="Grid View">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </button>
+              <button class="view-btn" id="list-view-btn" onclick="setView('list')" title="List View">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid" style="grid-template-columns:repeat(3,1fr);">
+          <!-- Populated by JS -->
+          <div class="skeleton" style="aspect-ratio:1;border-radius:var(--radius-md);"></div>
+          <div class="skeleton" style="aspect-ratio:1;border-radius:var(--radius-md);"></div>
+          <div class="skeleton" style="aspect-ratio:1;border-radius:var(--radius-md);"></div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+          <button class="pagination-btn">‹</button>
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <button class="pagination-btn">›</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Filter Bottom Sheet -->
+  <div class="overlay" id="filter-overlay" onclick="toggleFilterSheet()"></div>
+  <div class="bottom-sheet" id="filter-sheet">
+    <div class="bottom-sheet-handle"></div>
+    <div class="bottom-sheet-header">
+      <div style="font-weight:700;font-size:var(--text-base);">Filters</div>
+      <button class="btn btn-sm btn-primary" onclick="applyMobileFilters()">Apply Filters</button>
+    </div>
+    <div style="padding:0 var(--space-5) var(--space-10);">
+      <!-- Simplified mobile filter -->
+      <div style="margin-bottom:var(--space-5);">
+        <div style="font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-3);">Gold Purity</div>
+        <div class="purity-chips">
+          <button class="purity-chip">14K</button>
+          <button class="purity-chip selected">18K</button>
+          <button class="purity-chip selected">22K</button>
+          <button class="purity-chip">24K</button>
+        </div>
+      </div>
+      <div style="margin-bottom:var(--space-5);">
+        <div style="font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-3);">Gender</div>
+        <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;">
+          <button class="purity-chip">Women</button>
+          <button class="purity-chip">Men</button>
+          <button class="purity-chip">Kids</button>
+        </div>
+      </div>
+      <div style="margin-bottom:var(--space-5);">
+        <div style="font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-3);">Price Range</div>
+        <input type="range" class="range-slider" min="0" max="500000" value="200000" step="5000">
+        <div class="range-values"><span>₹0</span><span>₹2,00,000</span></div>
+      </div>
+      <div>
+        <div style="font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-3);">Sort By</div>
+        <select class="form-select">
+          <option>Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Best Rated</option>
+          <option>Newest First</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div id="shared-footer"></div>
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    let currentView = 'grid';
+    let filteredProducts = [...window.products];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Read URL params
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get('cat') || '';
+      const occ = params.get('occ') || '';
+      const gender = params.get('gender') || '';
+      const price = params.get('price') || '';
+
+      // Update page title
+      if (cat) {
+        const t = cat.replace(/-/g,' ').replace(/\b\w/g,l=>l.toUpperCase());
+        document.getElementById('page-title').textContent = t;
+        document.getElementById('category-breadcrumb').textContent = t;
+        document.title = t + ' | Swarnaveda';
+      }
+
+      renderProducts(filteredProducts);
+    });
+
+    function renderProducts(prods) {
+      const grid = document.getElementById('products-grid');
+      if (!prods.length) {
+        grid.innerHTML = `
+          <div class="empty-state" style="grid-column:1/-1;">
+            <div class="empty-state-icon">💍</div>
+            <h3>No Products Found</h3>
+            <p>Try adjusting your filters or explore our full collection.</p>
+            <a href="category.html" class="btn btn-primary" style="margin-top:var(--space-4);">View All Jewellery</a>
+          </div>`;
+        return;
+      }
+      grid.innerHTML = prods.map(p => window.renderProductCard(p, { basePath: '../' })).join('');
+      document.getElementById('product-count').textContent = prods.length;
+    }
+
+    function setView(v) {
+      currentView = v;
+      const grid = document.getElementById('products-grid');
+      document.getElementById('grid-view-btn').classList.toggle('active', v === 'grid');
+      document.getElementById('list-view-btn').classList.toggle('active', v === 'list');
+      grid.classList.toggle('list-view', v === 'list');
+    }
+
+    function sortProducts(val) {
+      const grid = [...filteredProducts];
+      if (val === 'price-asc') grid.sort((a,b) => a.price - b.price);
+      else if (val === 'price-desc') grid.sort((a,b) => b.price - a.price);
+      else if (val === 'rating') grid.sort((a,b) => b.rating - a.rating);
+      else if (val === 'newest') grid.sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt));
+      renderProducts(grid);
+    }
+
+    function togglePurityFilter(btn, purity) {
+      btn.classList.toggle('selected');
+    }
+
+    function updatePriceRange(val) {
+      const formatted = Number(val).toLocaleString('en-IN');
+      document.getElementById('price-max-label').textContent = 'Up to ₹' + formatted;
+      document.getElementById('max-price').value = formatted;
+    }
+
+    function clearFilters() {
+      document.querySelectorAll('.filter-sidebar input[type="checkbox"]').forEach(cb => cb.checked = false);
+      document.querySelectorAll('.purity-chip').forEach(c => c.classList.remove('selected'));
+      renderProducts(window.products);
+      document.getElementById('active-filters').innerHTML = '';
+    }
+
+    function toggleFilterSheet() {
+      const sheet = document.getElementById('filter-sheet');
+      const overlay = document.getElementById('filter-overlay');
+      sheet.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
+    function applyMobileFilters() {
+      toggleFilterSheet();
+      showToast('Filters applied', 'success');
+    }
+  </script>
+</body>
+</html>

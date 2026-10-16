@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Portal | Swarnaveda Fine Jewellery Marketplace</title>
+  <meta name="description" content="Manage your jewellery business, product listings, gold inventory, and customer orders on Swarnaveda.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/vendor.css">
+  <style>
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-5);
+      margin-bottom: var(--space-6);
+    }
+    @media (max-width: 1024px) {
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .kpi-row { grid-template-columns: 1fr; }
+    }
+    .kpi-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      box-shadow: var(--shadow-sm);
+    }
+    .kpi-label {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .kpi-val {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: var(--space-2) 0;
+    }
+    .kpi-trend {
+      font-size: var(--text-xs);
+      color: var(--forest-green);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .gold-rate-ticker-box {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #2f251d 100%);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      margin-bottom: var(--space-6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+    .rate-pill {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+    }
+    .rate-pill-title { font-size: 11px; color: var(--gold-300); text-transform: uppercase; font-weight: 600; }
+    .rate-pill-price { font-size: 1.25rem; font-weight: 700; color: var(--white); }
+  </style>
+</head>
+<body>
+  <div class="vendor-layout">
+    <!-- Sidebar -->
+    <aside class="vendor-sidebar">
+      <div class="sidebar-logo">
+        <a href="../index.html" style="text-decoration: none;">
+          <div class="logo-wordmark">Swarna<span>veda</span></div>
+          <div class="logo-tagline">Merchant Central</div>
+        </a>
+      </div>
+
+      <div class="sidebar-vendor-info">
+        <div class="vendor-avatar">R</div>
+        <div>
+          <div class="vendor-name">Raj Jewellers</div>
+          <div class="vendor-status">BIS Certified Vendor</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section">
+          <div class="sidebar-nav-label">Core Management</div>
+          <a href="dashboard.html" class="sidebar-nav-link active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="products.html" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            <span>My Products</span>
+            <span class="sidebar-nav-badge">24</span>
+          </a>
+          <a href="add-product.html" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            <span>Add New Jewellery</span>
+          </a>
+          <a href="products.html#orders" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span>Customer Orders</span>
+            <span class="sidebar-nav-badge">5 New</span>
+          </a>
+        </div>
+
+        <div class="sidebar-nav-section" style="margin-top: var(--space-4);">
+          <div class="sidebar-nav-label">Marketplace & Settings</div>
+          <a href="../index.html" class="sidebar-nav-link" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span>View Marketplace</span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="vendor-main">
+      <header class="vendor-header">
+        <div class="vendor-header-left">
+          <h1 class="vendor-page-title">Merchant Dashboard</h1>
+        </div>
+        <div class="vendor-header-right">
+          <a href="add-product.html" class="btn btn-primary btn-sm" style="display: flex; align-items: center; gap: 6px;">
+            <span>+ Add New Product</span>
+          </a>
+        </div>
+      </header>
+
+      <div style="padding: var(--space-6);">
+        <!-- Live Gold Rates Ticker -->
+        <div class="gold-rate-ticker-box">
+          <div>
+            <div style="font-weight: 700; font-size: var(--text-base); color: var(--gold-300);">
+              📈 Official Bullion Gold Benchmark Rate
+            </div>
+            <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.7); margin-top: 2px;">
+              Auto-syncs live with IBJA (India Bullion and Jewellers Association)
+            </div>
+          </div>
+          <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+            <div class="rate-pill">
+              <div class="rate-pill-title">24K Fine Gold (999)</div>
+              <div class="rate-pill-price">₹7,185 / g</div>
+            </div>
+            <div class="rate-pill">
+              <div class="rate-pill-title">22K Standard (916)</div>
+              <div class="rate-pill-price">₹6,587 / g</div>
+            </div>
+            <div class="rate-pill">
+              <div class="rate-pill-title">18K Contemporary (750)</div>
+              <div class="rate-pill-price">₹5,389 / g</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KPI Metrics Grid -->
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-label">Gross Sales (This Month)</div>
+            <div class="kpi-val">₹14,85,200</div>
+            <div class="kpi-trend">↑ 14.8% vs last month</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Total Orders</div>
+            <div class="kpi-val">48 Orders</div>
+            <div class="kpi-trend">↑ 8 orders pending dispatch</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Active Listed Products</div>
+            <div class="kpi-val" id="vendor-product-count">24 Items</div>
+            <div style="font-size: var(--text-xs); color: var(--text-muted);">100% BIS Hallmarked HUID</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Avg Order Value (AOV)</div>
+            <div class="kpi-val">₹30,940</div>
+            <div class="kpi-trend">Gold & Diamond mix</div>
+          </div>
+        </div>
+
+        <!-- Recent Orders Table -->
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm); margin-bottom: var(--space-6);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+            <h2 style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--charcoal); margin: 0;">
+              Recent Customer Orders
+            </h2>
+            <span style="font-size: var(--text-xs); color: var(--text-muted);">Showing 5 most recent orders</span>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm); text-align: left;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border-subtle); color: var(--text-muted); font-size: var(--text-xs); text-transform: uppercase;">
+                  <th style="padding: 12px 8px;">Order ID</th>
+                  <th style="padding: 12px 8px;">Customer</th>
+                  <th style="padding: 12px 8px;">Product</th>
+                  <th style="padding: 12px 8px;">Gold Weight</th>
+                  <th style="padding: 12px 8px;">Amount</th>
+                  <th style="padding: 12px 8px;">Status</th>
+                  <th style="padding: 12px 8px;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 14px 8px; font-weight: 600; color: var(--charcoal);">#SW-894210</td>
+                  <td style="padding: 14px 8px;">Ananya Sharma<br><span style="font-size: 11px; color: var(--text-muted);">Mumbai, MH</span></td>
+                  <td style="padding: 14px 8px;">22K Floral Garden Gold Ring</td>
+                  <td style="padding: 14px 8px;">4.60 g (22K)</td>
+                  <td style="padding: 14px 8px; font-weight: 700;">₹48,950</td>
+                  <td style="padding: 14px 8px;"><span style="background: #e6f4ea; color: #137333; padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: 600;">Processing</span></td>
+                  <td style="padding: 14px 8px;"><button class="btn btn-secondary btn-sm" onclick="alert('Printing BIS Hallmarking Consignment Dispatch Slip for #SW-894210')">Print Slip</button></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 14px 8px; font-weight: 600; color: var(--charcoal);">#SW-894195</td>
+                  <td style="padding: 14px 8px;">Priya Varma<br><span style="font-size: 11px; color: var(--text-muted);">Bengaluru, KA</span></td>
+                  <td style="padding: 14px 8px;">22K Emerald Jhumka Earrings</td>
+                  <td style="padding: 14px 8px;">12.40 g (22K)</td>
+                  <td style="padding: 14px 8px; font-weight: 700;">₹98,200</td>
+                  <td style="padding: 14px 8px;"><span style="background: #e8f0fe; color: #1a73e8; padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: 600;">In Transit</span></td>
+                  <td style="padding: 14px 8px;"><button class="btn btn-secondary btn-sm" onclick="alert('Tracking ID: BVC-SEC-99210294')">Track</button></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle);">
+                  <td style="padding: 14px 8px; font-weight: 600; color: var(--charcoal);">#SW-894080</td>
+                  <td style="padding: 14px 8px;">Rohan Mehra<br><span style="font-size: 11px; color: var(--text-muted);">New Delhi, DL</span></td>
+                  <td style="padding: 14px 8px;">22K Traditional Peacock Kada Bangle</td>
+                  <td style="padding: 14px 8px;">34.20 g (22K)</td>
+                  <td style="padding: 14px 8px; font-weight: 700;">₹2,42,000</td>
+                  <td style="padding: 14px 8px;"><span style="background: #fef7e0; color: #b06000; padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: 600;">Hallmark Verified</span></td>
+                  <td style="padding: 14px 8px;"><button class="btn btn-secondary btn-sm" onclick="alert('Consignment booked for Armoured Pickup')">Dispatch</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Quick Add Product Banner -->
+        <div style="background: var(--ivory-light); border: 1.5px dashed var(--gold-400); border-radius: var(--radius-lg); padding: var(--space-6); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4);">
+          <div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--charcoal); margin: 0 0 4px;">
+              Ready to list your newest jewellery masterpiece?
+            </h3>
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin: 0;">
+              Specify gold purity, net weight, BIS HUID, and let our live market calculator handle retail pricing.
+            </p>
+          </div>
+          <a href="add-product.html" class="btn btn-primary">
+            + Open Product Creator Form
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load custom products from localStorage if any
+      const customProducts = JSON.parse(localStorage.getItem('swarnaveda_custom_products') || '[]');
+      const total = 24 + customProducts.length;
+      document.getElementById('vendor-product-count').textContent = `${total} Items`;
+    });
+  </script>
+</body>
+</html>

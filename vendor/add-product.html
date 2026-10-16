@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List New Jewellery | Swarnaveda Merchant Central</title>
+  <meta name="description" content="Add new BIS hallmarked gold jewellery to Swarnaveda marketplace with automated live bullion pricing.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/vendor.css">
+  <style>
+    .add-form-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: var(--space-6);
+    }
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin-bottom: var(--space-6);
+      box-shadow: var(--shadow-sm);
+    }
+    .form-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: var(--space-4);
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: var(--space-3);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+    }
+    .form-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+    }
+    @media (max-width: 768px) {
+      .form-grid-2, .form-grid-3 { grid-template-columns: 1fr; }
+    }
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+    .field-label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+    .field-input, .field-select, .field-textarea {
+      padding: var(--space-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      background: var(--white);
+      font-family: var(--font-sans);
+    }
+    .field-input:focus, .field-select:focus, .field-textarea:focus {
+      outline: none;
+      border-color: var(--gold-500);
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    }
+    .field-helper {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .calc-box {
+      background: var(--ivory-light);
+      border: 1.5px solid var(--gold-300);
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+      margin-top: var(--space-4);
+    }
+    .calc-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-2);
+      color: var(--text-muted);
+    }
+    .calc-row.total {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      border-top: 1px dashed var(--gold-300);
+      padding-top: var(--space-3);
+      margin-top: var(--space-3);
+    }
+    .media-presets {
+      display: flex;
+      gap: var(--space-3);
+      margin-top: var(--space-3);
+    }
+    .media-preset-btn {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .media-preset-btn.active {
+      border-color: var(--gold-500);
+      background: var(--gold-50);
+    }
+    .img-preview-box {
+      width: 120px;
+      height: 120px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-top: var(--space-3);
+      background: var(--surface-warm);
+    }
+    .img-preview-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="vendor-layout">
+    <!-- Sidebar -->
+    <aside class="vendor-sidebar">
+      <div class="sidebar-logo">
+        <a href="../index.html" style="text-decoration: none;">
+          <div class="logo-wordmark">Swarna<span>veda</span></div>
+          <div class="logo-tagline">Merchant Central</div>
+        </a>
+      </div>
+
+      <div class="sidebar-vendor-info">
+        <div class="vendor-avatar">R</div>
+        <div>
+          <div class="vendor-name">Raj Jewellers</div>
+          <div class="vendor-status">BIS Certified Vendor</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section">
+          <div class="sidebar-nav-label">Core Management</div>
+          <a href="dashboard.html" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="products.html" class="sidebar-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            <span>My Products</span>
+          </a>
+          <a href="add-product.html" class="sidebar-nav-link active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            <span>Add New Jewellery</span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="vendor-main">
+      <header class="vendor-header">
+        <div class="vendor-header-left">
+          <h1 class="vendor-page-title">List New Fine Jewellery</h1>
+        </div>
+        <div class="vendor-header-right">
+          <a href="products.html" class="btn btn-secondary btn-sm">Cancel & Return</a>
+          <button class="btn btn-primary btn-sm" onclick="publishProduct()">🚀 Publish to Marketplace</button>
+        </div>
+      </header>
+
+      <div class="add-form-container">
+        <!-- Section 1: Basic Information -->
+        <div class="form-card">
+          <h2 class="form-card-title">1. Jewellery Details & Categorization</h2>
+          <div class="form-grid-2">
+            <div class="field-group">
+              <label class="field-label">Jewellery Design Title *</label>
+              <input type="text" id="p-title" class="field-input" placeholder="e.g. 22K Royal Peacock Polki Gold Necklace" value="22K Heritage Royal Peacock Gold Ring">
+            </div>
+            <div class="field-group">
+              <label class="field-label">SKU (Stock Keeping Unit)</label>
+              <input type="text" id="p-sku" class="field-input" placeholder="e.g. RJ-22K-RNG-104" value="RJ-22K-RNG-104">
+            </div>
+          </div>
+
+          <div class="form-grid-3">
+            <div class="field-group">
+              <label class="field-label">Category *</label>
+              <select id="p-category" class="field-select" onchange="autoSelectPreset()">
+                <option value="Rings" selected>Rings</option>
+                <option value="Necklaces">Necklaces</option>
+                <option value="Earrings">Earrings</option>
+                <option value="Bangles">Bangles</option>
+                <option value="Mangalsutra">Mangalsutra</option>
+                <option value="Pendants">Pendants</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Gender</label>
+              <select id="p-gender" class="field-select">
+                <option value="Women" selected>Women</option>
+                <option value="Men">Men</option>
+                <option value="Unisex">Unisex</option>
+                <option value="Kids">Kids</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Occasion</label>
+              <select id="p-occasion" class="field-select">
+                <option value="Wedding / Bridal">Wedding / Bridal</option>
+                <option value="Daily Wear" selected>Daily Wear</option>
+                <option value="Festive & Pooja">Festive & Pooja</option>
+                <option value="Party Wear">Party Wear</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Detailed Craftsmanship Description</label>
+            <textarea id="p-desc" class="field-textarea" rows="3" placeholder="Describe the karigar engraving, inspiration, and finishing...">Handcrafted in pure 22K yellow gold with fine filigree peacock motifs and comfortable comfort-fit band. Laser BIS hallmarked with authentic HUID certificate.</textarea>
+          </div>
+        </div>
+
+        <!-- Section 2: Metal, Purity & Weight -->
+        <div class="form-card">
+          <h2 class="form-card-title">2. Gold Bullion Specifications & BIS Hallmarking</h2>
+          <div class="form-grid-3">
+            <div class="field-group">
+              <label class="field-label">Gold Purity *</label>
+              <select id="p-purity" class="field-select" onchange="calculateLivePrice()">
+                <option value="22K" selected>22 Karat (916 Hallmarked)</option>
+                <option value="18K">18 Karat (750 Hallmarked)</option>
+                <option value="24K">24 Karat (999 Pure Bullion)</option>
+                <option value="14K">14 Karat (585 Everyday)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Gross Weight (grams) *</label>
+              <input type="number" id="p-gross" class="field-input" step="0.01" value="5.80" oninput="calculateLivePrice()">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Net Gold Weight (grams) *</label>
+              <input type="number" id="p-net" class="field-input" step="0.01" value="5.50" oninput="calculateLivePrice()">
+              <span class="field-helper">Weight of gold excluding stones</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="field-group">
+              <label class="field-label">BIS HUID Number (6-Alphanumeric) *</label>
+              <input type="text" id="p-huid" class="field-input" placeholder="e.g. BK92M4" value="RJ99X4" maxlength="6" style="text-transform: uppercase; font-family: monospace;">
+              <span class="field-helper">Mandatory government Hallmarking Unique ID</span>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Stone / Diamond Details</label>
+              <input type="text" id="p-stone" class="field-input" placeholder="e.g. Natural Ruby (0.45 ct)" value="None / Pure Gold">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Live Market Price Calculator -->
+        <div class="form-card">
+          <h2 class="form-card-title">3. Live Bullion Rate & Transparent Price Calculator</h2>
+          
+          <div class="form-grid-2">
+            <div class="field-group">
+              <label class="field-label">Making Charges per gram (₹) *</label>
+              <input type="number" id="p-making" class="field-input" value="1200" oninput="calculateLivePrice()">
+              <span class="field-helper">Artisan labor, die-casting & hand-finishing</span>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Stock Inventory in Vault</label>
+              <input type="number" id="p-stock" class="field-input" value="6">
+            </div>
+          </div>
+
+          <!-- Dynamic Calculations -->
+          <div class="calc-box">
+            <div style="font-weight: 700; color: var(--gold-800); font-size: var(--text-sm); margin-bottom: var(--space-3);">
+              📊 Auto-Calculated Retail Breakdown (Live IBJA Bullion Feed)
+            </div>
+            <div class="calc-row">
+              <span>Gold Net Value (<span id="calc-net-wt">5.50</span>g × ₹<span id="calc-rate">6,587</span>/g)</span>
+              <span id="calc-gold-val">₹36,228</span>
+            </div>
+            <div class="calc-row">
+              <span>Making Charges (<span id="calc-making-wt">5.50</span>g × ₹<span id="calc-making-rate">1,200</span>)</span>
+              <span id="calc-making-val">₹6,600</span>
+            </div>
+            <div class="calc-row">
+              <span>Statutory Bullion GST (3%)</span>
+              <span id="calc-gst-val">₹1,284</span>
+            </div>
+            <div class="calc-row total">
+              <span>Final Marketplace Listed Price</span>
+              <span id="calc-final-price" style="color: var(--gold-700);">₹44,112</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Imagery -->
+        <div class="form-card">
+          <h2 class="form-card-title">4. Product Photography</h2>
+          <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-3);">
+            Select an ultra high-resolution jewellery photograph asset or keep the auto-assigned category image:
+          </p>
+
+          <div class="media-presets">
+            <div class="media-preset-btn active" onclick="chooseImage('../assets/images/ring.jpg', this)">
+              <span>💍 Ring Asset</span>
+            </div>
+            <div class="media-preset-btn" onclick="chooseImage('../assets/images/necklace.jpg', this)">
+              <span>📿 Necklace Asset</span>
+            </div>
+            <div class="media-preset-btn" onclick="chooseImage('../assets/images/earrings.jpg', this)">
+              <span>✨ Earrings Asset</span>
+            </div>
+            <div class="media-preset-btn" onclick="chooseImage('../assets/images/bangle.jpg', this)">
+              <span>⚜️ Bangle Asset</span>
+            </div>
+          </div>
+
+          <div class="img-preview-box">
+            <img src="../assets/images/ring.jpg" id="chosen-img-preview" alt="Preview">
+          </div>
+        </div>
+
+        <!-- Action Row -->
+        <div style="display: flex; gap: var(--space-4); justify-content: flex-end; margin-top: var(--space-6);">
+          <button class="btn btn-secondary" onclick="window.location.href='products.html'">Discard</button>
+          <button class="btn btn-primary" onclick="publishProduct()" style="padding: var(--space-3) var(--space-8); font-size: var(--text-base);">
+            🚀 Publish Jewellery to Marketplace
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script>
+    let activeImage = '../assets/images/ring.jpg';
+
+    document.addEventListener('DOMContentLoaded', function() {
+      calculateLivePrice();
+    });
+
+    function autoSelectPreset() {
+      const cat = document.getElementById('p-category').value;
+      if (cat === 'Rings') chooseImage('../assets/images/ring.jpg');
+      else if (cat === 'Necklaces' || cat === 'Mangalsutra') chooseImage('../assets/images/necklace.jpg');
+      else if (cat === 'Earrings') chooseImage('../assets/images/earrings.jpg');
+      else if (cat === 'Bangles') chooseImage('../assets/images/bangle.jpg');
+    }
+
+    function chooseImage(src, btn) {
+      activeImage = src;
+      document.getElementById('chosen-img-preview').src = src;
+      if (btn) {
+        document.querySelectorAll('.media-preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    }
+
+    function calculateLivePrice() {
+      const purity = document.getElementById('p-purity').value;
+      const net = parseFloat(document.getElementById('p-net').value) || 0;
+      const makingPerG = parseFloat(document.getElementById('p-making').value) || 0;
+
+      let goldRate = 6587; // 22K
+      if (purity === '24K') goldRate = 7185;
+      else if (purity === '18K') goldRate = 5389;
+      else if (purity === '14K') goldRate = 4200;
+
+      const goldVal = Math.round(net * goldRate);
+      const makingVal = Math.round(net * makingPerG);
+      const gstVal = Math.round((goldVal + makingVal) * 0.03);
+      const total = goldVal + makingVal + gstVal;
+
+      document.getElementById('calc-net-wt').textContent = net.toFixed(2);
+      document.getElementById('calc-rate').textContent = goldRate.toLocaleString('en-IN');
+      document.getElementById('calc-gold-val').textContent = `₹${goldVal.toLocaleString('en-IN')}`;
+      document.getElementById('calc-making-wt').textContent = net.toFixed(2);
+      document.getElementById('calc-making-rate').textContent = makingPerG.toLocaleString('en-IN');
+      document.getElementById('calc-making-val').textContent = `₹${makingVal.toLocaleString('en-IN')}`;
+      document.getElementById('calc-gst-val').textContent = `₹${gstVal.toLocaleString('en-IN')}`;
+      document.getElementById('calc-final-price').textContent = `₹${total.toLocaleString('en-IN')}`;
+
+      return total;
+    }
+
+    function publishProduct() {
+      const title = document.getElementById('p-title').value.trim();
+      const sku = document.getElementById('p-sku').value.trim();
+      const category = document.getElementById('p-category').value;
+      const purity = document.getElementById('p-purity').value;
+      const gross = parseFloat(document.getElementById('p-gross').value) || 5;
+      const net = parseFloat(document.getElementById('p-net').value) || 4.5;
+      const huid = document.getElementById('p-huid').value.trim().toUpperCase();
+      const stock = parseInt(document.getElementById('p-stock').value) || 5;
+      const desc = document.getElementById('p-desc').value.trim();
+      const stone = document.getElementById('p-stone').value.trim();
+      const finalPrice = calculateLivePrice();
+
+      if (!title || !huid) {
+        alert('Please complete all required fields: Title and BIS HUID are mandatory.');
+        return;
+      }
+
+      const newProduct = {
+        id: 'VP-' + Date.now().toString().slice(-5),
+        vendorId: 'V001',
+        vendorName: 'Raj Jewellers',
+        vendorVerified: true,
+        name: title,
+        sku: sku || 'SKU-' + Math.floor(Math.random() * 8999),
+        category: category,
+        subcategory: category,
+        gender: document.getElementById('p-gender').value,
+        occasion: document.getElementById('p-occasion').value,
+        image: activeImage,
+        images: [activeImage],
+        price: finalPrice,
+        compareAtPrice: Math.round(finalPrice * 1.08),
+        goldPurity: purity,
+        grossWeight: gross,
+        netGoldWeight: net,
+        goldColor: 'Yellow Gold',
+        stoneType: stone,
+        huid: huid,
+        hallmark: 'BIS Certified',
+        certification: 'BIS Hallmarked',
+        stock: stock,
+        sizes: [10, 12, 14, 16],
+        rating: 5.0,
+        reviewCount: 1,
+        badge: 'new',
+        status: 'active',
+        tags: [category.toLowerCase(), 'gold', 'hallmarked'],
+        description: desc,
+        createdAt: new Date().toISOString().split('T')[0]
+      };
+
+      // Save to localStorage
+      let customProds = JSON.parse(localStorage.getItem('swarnaveda_custom_products') || '[]');
+      customProds.unshift(newProduct);
+      localStorage.setItem('swarnaveda_custom_products', JSON.stringify(customProds));
+
+      // Also push into runtime window.products
+      if (window.products) {
+        window.products.unshift(newProduct);
+      }
+
+      alert(`🎉 Success! "${newProduct.name}" has been published to the Swarnaveda Marketplace and your inventory.`);
+      window.location.href = 'products.html';
+    }
+  </script>
+</body>
+</html>

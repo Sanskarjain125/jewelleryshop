@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & VIP Consultation | Swarnaveda Fine Jewellery</title>
+  <meta name="description" content="Book a private VIP bridal consultation or speak with our certified gemologists and jewellery stylists.">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <style>
+    .contact-container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: var(--space-10) var(--space-6) var(--space-16);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+    @media (max-width: 992px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    .consultation-card {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-md);
+    }
+    .form-group {
+      margin-bottom: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+    .form-label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+    .form-input, .form-select, .form-textarea {
+      padding: var(--space-3);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      background: var(--white);
+    }
+    .info-card {
+      background: var(--ivory-light);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin-bottom: var(--space-6);
+    }
+    .store-list-item {
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .store-list-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="shared-header"></div>
+
+  <div class="contact-container">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto var(--space-10);">
+      <h1 style="font-family: var(--font-serif); font-size: 2.75rem; color: var(--charcoal); margin-bottom: var(--space-2);">
+        Jewellery Concierge & Appointments
+      </h1>
+      <p style="font-size: var(--text-sm); color: var(--text-muted);">
+        Whether you are planning your bridal trousseau or seeking bespoke hallmarked heirlooms, our master stylists are at your service.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Left: VIP Appointment Booking Form -->
+      <div class="consultation-card">
+        <h2 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--charcoal); margin-bottom: var(--space-4);">
+          Schedule a Private Consultation
+        </h2>
+
+        <form id="consultation-form" onsubmit="handleConsultationSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="c-name">Full Name *</label>
+            <input type="text" id="c-name" class="form-input" placeholder="e.g. Meera Kapoor" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+            <div class="form-group">
+              <label class="form-label" for="c-phone">Phone Number *</label>
+              <input type="tel" id="c-phone" class="form-input" placeholder="+91 98200 12345" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-email">Email Address *</label>
+              <input type="email" id="c-email" class="form-input" placeholder="meera@example.com" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+            <div class="form-group">
+              <label class="form-label" for="c-type">Consultation Format *</label>
+              <select id="c-type" class="form-select">
+                <option value="video">Virtual Video Call (HD Zoom/Meet)</option>
+                <option value="in-store">Flagship Boutique Visit</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-interest">Collection of Interest</label>
+              <select id="c-interest" class="form-select">
+                <option value="bridal">Bridal & Wedding Sets</option>
+                <option value="rings">Gold & Diamond Rings</option>
+                <option value="necklaces">Temple & Antique Necklaces</option>
+                <option value="bangles">Kadas & Bangles</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="c-date">Preferred Date & Time</label>
+            <input type="date" id="c-date" class="form-input" value="2026-10-20">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--space-3) 0; margin-top: var(--space-2);">
+            Confirm Personal Appointment →
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Direct Concierge & Showrooms -->
+      <div>
+        <div class="info-card">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--charcoal); margin-bottom: var(--space-3);">
+            Direct Concierge Assistance
+          </h3>
+          <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-3);">
+            Reach our luxury advisory desk directly for urgent customization inquiries or bullion valuation.
+          </p>
+          <div style="font-size: var(--text-sm); line-height: 1.8; color: var(--charcoal);">
+            <div>📞 <strong>Toll Free:</strong> 1800-266-9090 (9 AM - 9 PM)</div>
+            <div>💬 <strong>WhatsApp Concierge:</strong> +91 98200 44880</div>
+            <div>✉️ <strong>Email:</strong> concierge@swarnaveda.com</div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--charcoal); margin-bottom: var(--space-3);">
+            Flagship Partner Boutiques
+          </h3>
+
+          <div class="store-list-item">
+            <div style="font-weight: 600; font-size: var(--text-sm); color: var(--charcoal);">Mumbai Flagship Boutique</div>
+            <div style="font-size: var(--text-xs); color: var(--text-muted); margin-top: 2px;">
+              Heritage Villa, 14th Road, Off Linking Road, Bandra West, Mumbai 400050
+            </div>
+          </div>
+
+          <div class="store-list-item">
+            <div style="font-weight: 600; font-size: var(--text-sm); color: var(--charcoal);">New Delhi Luxury Suite</div>
+            <div style="font-size: var(--text-xs); color: var(--text-muted); margin-top: 2px;">
+              DLF Emporio, Vasant Kunj II, New Delhi 110070
+            </div>
+          </div>
+
+          <div class="store-list-item">
+            <div style="font-weight: 600; font-size: var(--text-sm); color: var(--charcoal);">Bengaluru Showroom</div>
+            <div style="font-size: var(--text-xs); color: var(--text-muted); margin-top: 2px;">
+              UB City, Vittal Mallya Road, Bengaluru 560001
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shared-footer"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      renderSharedHeader();
+      renderSharedFooter();
+    });
+
+    function handleConsultationSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('c-name').value;
+      const format = document.getElementById('c-type').value;
+      alert(`🎉 Thank you, ${name}! Your private jewellery appointment (${format === 'video' ? 'Virtual Video Call' : 'In-Store Boutique'}) has been confirmed. Our jewellery concierge will reach out shortly.`);
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

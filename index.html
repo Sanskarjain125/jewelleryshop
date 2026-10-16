@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swarnaveda – Timeless Gold & Diamond Jewellery | India's Premium Jewellery Marketplace</title>
+  <meta name="description" content="Discover exquisite BIS hallmarked gold and diamond jewellery. Shop rings, necklaces, bangles, earrings and bridal sets from India's most trusted jewellery marketplace.">
+  <meta name="keywords" content="gold jewellery, diamond jewellery, gold rings, gold necklace, bridal jewellery, BIS hallmarked, 22K gold, online jewellery store India">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <style>
+    /* Category background colors for placeholder images */
+    .cat-rings { background: linear-gradient(135deg,#f8edcb,#f0d78a); }
+    .cat-earrings { background: linear-gradient(135deg,#fde8e8,#f5c8c8); }
+    .cat-necklaces { background: linear-gradient(135deg,#e8f4e8,#c8e8c8); }
+    .cat-bangles { background: linear-gradient(135deg,#e8e8f8,#c8c8f0); }
+    .cat-chains { background: linear-gradient(135deg,#f8f0e8,#eedd99); }
+    .cat-bracelets { background: linear-gradient(135deg,#ffe8f0,#f5b8d0); }
+    .cat-mangalsutra { background: linear-gradient(135deg,#f0e8ff,#d8b0f8); }
+    .cat-pendants { background: linear-gradient(135deg,#e8fff0,#a8e8c0); }
+    .cat-diamond { background: linear-gradient(135deg,#e0f0ff,#a0c8f0); }
+    .cat-bridal { background: linear-gradient(135deg,#fff0e0,#f5d090); }
+
+    .cat-placeholder {
+      width:100%;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      font-size:2.5rem;
+    }
+    .cat-placeholder span {
+      font-family:var(--font-display);
+      font-size:0.75rem;
+      font-weight:500;
+      letter-spacing:0.05em;
+      color:var(--text-primary);
+      margin-top:6px;
+      opacity:0.7;
+    }
+
+    /* Occasion card colors */
+    .occ-wedding { background: linear-gradient(160deg,#3d2b00,#8a6420); }
+    .occ-engagement { background: linear-gradient(160deg,#1a1035,#4a3070); }
+    .occ-festive { background: linear-gradient(160deg,#3d1a00,#8a3a00); }
+    .occ-daily { background: linear-gradient(160deg,#1a2a1a,#3a5a3a); }
+    .occ-anniversary { background: linear-gradient(160deg,#2a1a2a,#6a3060); }
+    .occ-party { background: linear-gradient(160deg,#1a2a3d,#2a4a6a); }
+    .occ-office { background: linear-gradient(160deg,#2a2a2a,#4a4040); }
+    .occ-gifting { background: linear-gradient(160deg,#3d2020,#8a3030); }
+
+    .store-bg {
+      width:100%;
+      height:100%;
+      background: linear-gradient(135deg,#2d2520,#4a3820);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:4rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement-bar" role="banner">
+  <div class="announcement-track">
+    <span class="announcement-item">🚚 Free Shipping on Orders Above ₹25,000</span>
+    <span class="announcement-dot">●</span>
+    <span class="announcement-item">📞 Book a Personal Jewellery Consultation –
+      <a href="pages/appointment.html">Schedule Now</a>
+    </span>
+    <span class="announcement-dot">●</span>
+    <span class="announcement-item">✨ BIS Hallmarked Jewellery Guaranteed</span>
+    <span class="announcement-dot">●</span>
+    <span class="announcement-item">💎 New Arrivals: Diwali Bridal Collection is Live</span>
+    <span class="announcement-dot">●</span>
+    <span class="announcement-item">🚚 Free Shipping on Orders Above ₹25,000</span>
+    <span class="announcement-dot">●</span>
+    <span class="announcement-item">📞 Book a Personal Jewellery Consultation –
+      <a href="pages/appointment.html">Schedule Now</a>
+    </span>
+    <span class="announcement-dot">●</span>
+    <span class="announcement-item">✨ BIS Hallmarked Jewellery Guaranteed</span>
+    <span class="announcement-dot">●</span>
+    <span class="announcement-item">💎 New Arrivals: Diwali Bridal Collection is Live</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     DESKTOP HEADER
+     ============================================================ -->
+<header class="site-header" role="banner">
+  <div class="header-main">
+    <!-- Logo -->
+    <a href="index.html" class="logo" aria-label="Swarnaveda – Home">
+      <div class="logo-wordmark">Swarna<span>veda</span></div>
+      <div class="logo-tagline">Fine Jewellery Marketplace</div>
+    </a>
+
+    <!-- Search -->
+    <div class="header-search">
+      <div class="header-search-inner" data-open-search>
+        <svg class="header-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input
+          type="text"
+          class="header-search-input"
+          placeholder="Search for rings, necklaces, bangles..."
+          id="main-search-input"
+          autocomplete="off"
+          aria-label="Search jewellery"
+          readonly>
+        <button class="header-search-btn" aria-label="Search">Search</button>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <a href="pages/stores.html" class="header-action-btn" aria-label="Store Locations">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 2a10 10 0 0 0-10 10c0 7 10 14 10 14s10-7 10-14A10 10 0 0 0 12 2z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span>Stores</span>
+      </a>
+
+      <a href="pages/account.html" class="header-action-btn" aria-label="My Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>Account</span>
+      </a>
+
+      <a href="pages/wishlist.html" class="header-action-btn" aria-label="Wishlist" style="position:relative">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <span class="action-badge wishlist-badge" style="display:none">0</span>
+        <span>Wishlist</span>
+      </a>
+
+      <a href="pages/cart.html" class="header-action-btn" aria-label="Shopping Cart" style="position:relative">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="action-badge cart-badge" style="display:none">0</span>
+        <span>Cart</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <div class="nav-item">
+        <a href="pages/new-arrivals.html" class="nav-link">New Arrivals</a>
+      </div>
+
+      <!-- GOLD Mega Menu -->
+      <div class="nav-item">
+        <div class="nav-link">
+          Gold
+          <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="mega-menu">
+          <div class="mega-menu-grid">
+            <div>
+              <div class="mega-col-title">Gold Jewellery</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/category.html?cat=gold-rings">Gold Rings</a>
+                <a class="mega-link" href="pages/category.html?cat=gold-earrings">Gold Earrings</a>
+                <a class="mega-link" href="pages/category.html?cat=gold-necklaces">Gold Necklaces</a>
+                <a class="mega-link" href="pages/category.html?cat=gold-bangles">Gold Bangles</a>
+                <a class="mega-link" href="pages/category.html?cat=gold-bracelets">Gold Bracelets</a>
+                <a class="mega-link" href="pages/category.html?cat=gold-chains">Gold Chains</a>
+                <a class="mega-link" href="pages/category.html?cat=pendants">Pendants</a>
+                <a class="mega-link" href="pages/category.html?cat=mangalsutra">Mangalsutra</a>
+                <a class="mega-link" href="pages/category.html?cat=nose-pins">Nose Pins</a>
+              </div>
+            </div>
+            <div>
+              <div class="mega-col-title">Shop by Occasion</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/category.html?occ=wedding">Wedding</a>
+                <a class="mega-link" href="pages/category.html?occ=daily-wear">Daily Wear</a>
+                <a class="mega-link" href="pages/category.html?occ=festive">Festive</a>
+                <a class="mega-link" href="pages/category.html?occ=office-wear">Office Wear</a>
+                <a class="mega-link" href="pages/category.html?occ=party-wear">Party Wear</a>
+                <a class="mega-link" href="pages/category.html?occ=engagement">Engagement</a>
+              </div>
+            </div>
+            <div>
+              <div class="mega-col-title">Shop by Price</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/category.html?price=under-25k">Under ₹25,000</a>
+                <a class="mega-link" href="pages/category.html?price=25k-50k">₹25,000 – ₹50,000</a>
+                <a class="mega-link" href="pages/category.html?price=50k-1l">₹50,000 – ₹1 Lakh</a>
+                <a class="mega-link" href="pages/category.html?price=above-1l">Above ₹1 Lakh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIAMOND Mega Menu -->
+      <div class="nav-item">
+        <div class="nav-link">
+          Diamond
+          <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="mega-menu">
+          <div class="mega-menu-grid">
+            <div>
+              <div class="mega-col-title">Diamond Jewellery</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/category.html?cat=diamond-rings">Diamond Rings</a>
+                <a class="mega-link" href="pages/category.html?cat=diamond-earrings">Diamond Earrings</a>
+                <a class="mega-link" href="pages/category.html?cat=diamond-necklaces">Diamond Necklaces</a>
+                <a class="mega-link" href="pages/category.html?cat=diamond-bangles">Diamond Bangles</a>
+                <a class="mega-link" href="pages/category.html?cat=diamond-pendants">Diamond Pendants</a>
+                <a class="mega-link" href="pages/category.html?cat=solitaires">Solitaires</a>
+              </div>
+            </div>
+            <div>
+              <div class="mega-col-title">By Metal</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/category.html?color=yellow-gold">Yellow Gold</a>
+                <a class="mega-link" href="pages/category.html?color=white-gold">White Gold</a>
+                <a class="mega-link" href="pages/category.html?color=rose-gold">Rose Gold</a>
+                <a class="mega-link" href="pages/category.html?color=platinum">Platinum</a>
+              </div>
+            </div>
+            <div>
+              <div class="mega-col-title">By Certification</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/category.html?cert=gia">GIA Certified</a>
+                <a class="mega-link" href="pages/category.html?cert=igi">IGI Certified</a>
+                <a class="mega-link" href="pages/category.html?cert=bis">BIS Hallmarked</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="pages/bridal.html" class="nav-link" style="display:flex;">Bridal</a>
+      <a href="pages/category.html?gender=men" class="nav-link" style="display:flex;">Men</a>
+      <a href="pages/category.html?gender=women" class="nav-link" style="display:flex;">Women</a>
+      <a href="pages/category.html?gender=kids" class="nav-link" style="display:flex;">Kids</a>
+      <a href="pages/category.html?occ=gifting" class="nav-link" style="display:flex;">Gifts</a>
+
+      <div class="nav-item">
+        <div class="nav-link">
+          Collections
+          <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="mega-menu">
+          <div class="mega-menu-grid">
+            <div>
+              <div class="mega-col-title">Featured</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/bridal.html">Bridal Jewellery</a>
+                <a class="mega-link" href="pages/category.html?col=diwali">Diwali Collection</a>
+                <a class="mega-link" href="pages/category.html?col=heritage">Heritage by Swarnaveda</a>
+                <a class="mega-link" href="pages/category.html?col=everyday">Everyday Elegance</a>
+                <a class="mega-link" href="pages/category.html?col=temple">Temple Jewellery</a>
+              </div>
+            </div>
+            <div>
+              <div class="mega-col-title">Vendors</div>
+              <div class="mega-links">
+                <a class="mega-link" href="pages/store-detail.html?id=V001">Raj Jewellers</a>
+                <a class="mega-link" href="pages/store-detail.html?id=V002">Srinivas Gold House</a>
+                <a class="mega-link" href="pages/store-detail.html?id=V003">Padmavathi Jewels</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="pages/category.html?sale=true" class="nav-link" style="display:flex;color:var(--error);">Offers</a>
+
+      <!-- Vendor Portal Link -->
+      <div style="margin-left:auto;">
+        <a href="vendor/dashboard.html" class="btn btn-sm btn-secondary" style="font-size:0.7rem;padding:6px 14px;margin:8px 0;">
+          Vendor Portal
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     MOBILE HEADER
+     ============================================================ -->
+<header class="mobile-header" role="banner">
+  <button class="hamburger" id="hamburger-btn" aria-label="Open Menu" aria-expanded="false">
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+  </button>
+
+  <a href="index.html" class="logo">
+    <div class="logo-wordmark" style="font-size:1.35rem;">Swarna<span>veda</span></div>
+  </a>
+
+  <div style="display:flex;gap:var(--space-1);">
+    <button class="header-action-btn" data-open-search aria-label="Search" style="flex-direction:row;padding:var(--space-2);">
+      <svg style="width:22px;height:22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </button>
+    <a href="pages/cart.html" class="header-action-btn" aria-label="Cart" style="flex-direction:row;padding:var(--space-2);position:relative;">
+      <svg style="width:22px;height:22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="action-badge cart-badge" style="display:none;top:2px;right:2px;">0</span>
+    </a>
+  </div>
+</header>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Navigation Menu">
+  <div class="mobile-menu-header">
+    <div class="logo-wordmark" style="color:var(--white);font-size:1.35rem;">Swarna<span style="color:var(--gold-300);">veda</span></div>
+    <button onclick="document.getElementById('mobile-menu').classList.remove('active')" style="color:rgba(255,255,255,0.6);font-size:1.25rem;cursor:pointer;">✕</button>
+  </div>
+  <div style="padding:var(--space-5);border-bottom:1px solid var(--border);">
+    <div style="display:flex;gap:var(--space-3);">
+      <a href="pages/login.html" class="btn btn-secondary btn-sm" style="flex:1;text-align:center;">Login</a>
+      <a href="pages/register.html" class="btn btn-primary btn-sm" style="flex:1;text-align:center;">Register</a>
+    </div>
+  </div>
+  <ul class="mobile-nav-list">
+    <li class="mobile-nav-item"><a href="pages/new-arrivals.html" class="mobile-nav-link">New Arrivals</a></li>
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link">Gold Jewellery <span>›</span></div>
+      <ul class="mobile-submenu">
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=gold-rings">Gold Rings</a></li>
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=gold-earrings">Gold Earrings</a></li>
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=gold-necklaces">Gold Necklaces</a></li>
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=gold-bangles">Gold Bangles</a></li>
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=mangalsutra">Mangalsutra</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link">Diamond Jewellery <span>›</span></div>
+      <ul class="mobile-submenu">
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=diamond-rings">Diamond Rings</a></li>
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=diamond-earrings">Diamond Earrings</a></li>
+        <li><a class="mobile-sub-link" href="pages/category.html?cat=diamond-necklaces">Diamond Necklaces</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav-item"><a href="pages/bridal.html" class="mobile-nav-link">Bridal</a></li>
+    <li class="mobile-nav-item"><a href="pages/category.html?gender=men" class="mobile-nav-link">Men</a></li>
+    <li class="mobile-nav-item"><a href="pages/category.html?gender=women" class="mobile-nav-link">Women</a></li>
+    <li class="mobile-nav-item"><a href="pages/category.html?gender=kids" class="mobile-nav-link">Kids</a></li>
+    <li class="mobile-nav-item"><a href="pages/gold-exchange.html" class="mobile-nav-link">Gold Exchange</a></li>
+    <li class="mobile-nav-item"><a href="pages/appointment.html" class="mobile-nav-link">Book Appointment</a></li>
+    <li class="mobile-nav-item"><a href="vendor/dashboard.html" class="mobile-nav-link" style="color:var(--gold-accent);">Vendor Portal →</a></li>
+  </ul>
+</div>
+
+<!-- ============================================================
+     SEARCH OVERLAY
+     ============================================================ -->
+<div id="search-overlay" class="search-overlay" role="search">
+  <div class="search-overlay-box">
+    <div class="search-overlay-input-wrap">
+      <svg class="search-overlay-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input
+        type="text"
+        class="search-overlay-input"
+        id="search-overlay-input"
+        placeholder="Search jewellery…"
+        aria-label="Search">
+      <button class="search-overlay-close" id="search-close-btn" aria-label="Close Search">ESC</button>
+    </div>
+
+    <div class="search-suggestions">
+      <div class="search-suggestion-label">Popular Searches</div>
+      <a href="pages/category.html?cat=gold-rings" class="search-suggestion-item">
+        <div class="suggestion-icon">💍</div>
+        <div>
+          <div class="suggestion-text">Gold Rings</div>
+          <div class="suggestion-sub">124 products available</div>
+        </div>
+      </a>
+      <a href="pages/category.html?cat=gold-necklaces" class="search-suggestion-item">
+        <div class="suggestion-icon">📿</div>
+        <div>
+          <div class="suggestion-text">Gold Necklaces</div>
+          <div class="suggestion-sub">89 products available</div>
+        </div>
+      </a>
+      <a href="pages/bridal.html" class="search-suggestion-item">
+        <div class="suggestion-icon">👰</div>
+        <div>
+          <div class="suggestion-text">Bridal Collection</div>
+          <div class="suggestion-sub">Complete bridal sets</div>
+        </div>
+      </a>
+      <a href="pages/category.html?cat=diamond-rings" class="search-suggestion-item">
+        <div class="suggestion-icon">💎</div>
+        <div>
+          <div class="suggestion-text">Diamond Rings</div>
+          <div class="suggestion-sub">GIA certified diamonds</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main id="main-content">
+
+  <!-- ── HERO SECTION ── -->
+  <section class="hero" aria-label="Hero Banner">
+    <div class="hero-bg">
+      <img src="assets/images/hero.jpg" alt="Premium Indian Gold Jewellery" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Diwali Collection 2026</div>
+      <h1 class="hero-title">
+        Timeless Jewellery.<br>
+        Made for <em>Every Story.</em>
+      </h1>
+      <p class="hero-subtitle">
+        Discover beautifully crafted gold and diamond jewellery designed to celebrate your most special moments.
+      </p>
+      <div class="hero-actions">
+        <a href="pages/category.html?cat=gold" class="btn btn-lg hero-btn-primary">Shop Gold</a>
+        <a href="pages/category.html" class="btn btn-lg hero-btn-outline">Explore Collection</a>
+      </div>
+    </div>
+
+    <div class="hero-dots" aria-label="Slide indicators">
+      <div class="hero-dot active"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
+    </div>
+  </section>
+
+  <!-- ── GOLD RATE BAR ── -->
+  <div class="gold-rate-bar" role="region" aria-label="Live Gold Rates">
+    <div class="gold-rate-inner">
+      <div class="gold-rate-label">Live Rates</div>
+      <div class="gold-rates-scroll">
+        <div class="gold-rate-item">
+          <div>
+            <div class="rate-type">24K Gold</div>
+            <div class="rate-unit">per 10g</div>
+          </div>
+          <div class="rate-value" id="rate-24k">₹7,185</div>
+        </div>
+        <div class="rate-divider"></div>
+        <div class="gold-rate-item">
+          <div>
+            <div class="rate-type">22K Gold</div>
+            <div class="rate-unit">per 10g</div>
+          </div>
+          <div class="rate-value" id="rate-22k">₹6,587</div>
+        </div>
+        <div class="rate-divider"></div>
+        <div class="gold-rate-item">
+          <div>
+            <div class="rate-type">18K Gold</div>
+            <div class="rate-unit">per 10g</div>
+          </div>
+          <div class="rate-value" id="rate-18k">₹5,389</div>
+        </div>
+        <div class="rate-divider"></div>
+        <div class="gold-rate-item">
+          <div>
+            <div class="rate-type">Silver</div>
+            <div class="rate-unit">per 10g</div>
+          </div>
+          <div class="rate-value" id="rate-silver">₹87</div>
+        </div>
+      </div>
+      <div class="rate-updated">
+        <div class="rate-updated-dot"></div>
+        Updated Today
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SHOP BY CATEGORY ── -->
+  <section class="section category-section" aria-labelledby="category-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Explore</div>
+        <h2 class="section-title" id="category-heading">Shop by Category</h2>
+        <p class="section-subtitle">Find jewellery for every occasion in our curated collections</p>
+      </div>
+
+      <div class="categories-grid">
+        <a href="pages/category.html?cat=gold-rings" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-rings">
+              💍<span>Gold Rings</span>
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Gold Rings</div>
+        </a>
+        <a href="pages/category.html?cat=gold-earrings" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-earrings">
+              <img src="assets/images/earrings.jpg" alt="Gold Earrings" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);">
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Gold Earrings</div>
+        </a>
+        <a href="pages/category.html?cat=gold-necklaces" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-necklaces">
+              <img src="assets/images/necklace.jpg" alt="Gold Necklaces" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);">
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Gold Necklaces</div>
+        </a>
+        <a href="pages/category.html?cat=gold-bangles" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-bangles">
+              <img src="assets/images/bangle.jpg" alt="Gold Bangles" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);">
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Gold Bangles</div>
+        </a>
+        <a href="pages/category.html?cat=gold-chains" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-chains">
+              ⛓<span>Gold Chains</span>
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Gold Chains</div>
+        </a>
+        <a href="pages/category.html?cat=gold-bracelets" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-bracelets">
+              💛<span>Bracelets</span>
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Gold Bracelets</div>
+        </a>
+        <a href="pages/category.html?cat=mangalsutra" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-mangalsutra">
+              🖤<span>Mangalsutra</span>
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Mangalsutra</div>
+        </a>
+        <a href="pages/category.html?cat=pendants" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-pendants">
+              🔺<span>Pendants</span>
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Pendants</div>
+        </a>
+        <a href="pages/category.html?cat=diamond" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-diamond">
+              💎<span>Diamond</span>
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Diamond Jewellery</div>
+        </a>
+        <a href="pages/bridal.html" class="category-card">
+          <div class="category-img-wrap">
+            <div class="cat-placeholder cat-bridal">
+              <img src="assets/images/bridal.jpg" alt="Bridal Jewellery" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);">
+            </div>
+            <div class="category-overlay"><span class="category-explore">Explore →</span></div>
+          </div>
+          <div class="category-name">Bridal Jewellery</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEW ARRIVALS ── -->
+  <section class="section" style="background:var(--ivory-dark);" aria-labelledby="new-arrivals-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Just In</div>
+        <h2 class="section-title" id="new-arrivals-heading">New Arrivals</h2>
+        <p class="section-subtitle">The newest pieces from our finest jewellery artisans</p>
+      </div>
+
+      <div class="products-grid" id="new-arrivals-grid" style="grid-template-columns:repeat(4,1fr);">
+        <!-- Populated by JS -->
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-10);">
+        <a href="pages/new-arrivals.html" class="btn btn-secondary btn-lg">View All New Arrivals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SHOP BY OCCASION ── -->
+  <section class="section" style="background:var(--white);" aria-labelledby="occasion-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Occasion Wear</div>
+        <h2 class="section-title" id="occasion-heading">Shop by Occasion</h2>
+      </div>
+
+      <div class="occasions-grid">
+        <a href="pages/category.html?occ=wedding" class="occasion-card">
+          <div class="occ-wedding" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Wedding</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+        <a href="pages/category.html?occ=engagement" class="occasion-card">
+          <div class="occ-engagement" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Engagement</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+        <a href="pages/category.html?occ=festive" class="occasion-card">
+          <div class="occ-festive" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Festive</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+        <a href="pages/category.html?occ=daily-wear" class="occasion-card">
+          <div class="occ-daily" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Daily Wear</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+        <a href="pages/category.html?occ=anniversary" class="occasion-card">
+          <div class="occ-anniversary" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Anniversary</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+        <a href="pages/category.html?occ=party-wear" class="occasion-card">
+          <div class="occ-party" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Party Wear</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+        <a href="pages/category.html?occ=office-wear" class="occasion-card">
+          <div class="occ-office" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Office Wear</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+        <a href="pages/category.html?occ=gifting" class="occasion-card">
+          <div class="occ-gifting" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+          <div class="occasion-overlay">
+            <div class="occasion-name">Gifting</div>
+            <div class="occasion-link">Explore Collection →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BRIDAL COLLECTION ── -->
+  <section class="section section-sm" style="background:var(--ivory-dark);" aria-labelledby="bridal-heading">
+    <div class="container">
+      <div class="bridal-banner">
+        <img src="assets/images/bridal.jpg" alt="Bridal Collection" class="bridal-banner-img">
+        <div class="bridal-banner-overlay">
+          <div class="bridal-banner-content">
+            <div class="bridal-eyebrow">Bridal Collection 2026</div>
+            <h2 class="bridal-title" id="bridal-heading">Your Forever Starts Here</h2>
+            <p class="bridal-subtitle">A curated collection of exquisite bridal jewellery sets designed to make your special day truly unforgettable.</p>
+            <div style="display:flex;gap:var(--space-4);">
+              <a href="pages/bridal.html" class="btn btn-primary btn-lg">Explore Bridal</a>
+              <a href="pages/appointment.html" class="btn btn-outline btn-lg" style="background:transparent;border-color:rgba(255,255,255,0.5);color:var(--white);">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BEST SELLERS ── -->
+  <section class="section" style="background:var(--white);" aria-labelledby="bestsellers-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Top Picks</div>
+        <h2 class="section-title" id="bestsellers-heading">Best Sellers</h2>
+        <p class="section-subtitle">Our most loved jewellery, chosen by thousands of happy customers</p>
+      </div>
+
+      <div class="products-grid" id="bestsellers-grid" style="grid-template-columns:repeat(4,1fr);">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SHOP BY PRICE ── -->
+  <section class="section" style="background:var(--ivory-dark);" aria-labelledby="price-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Budget Friendly</div>
+        <h2 class="section-title" id="price-heading">Shop by Budget</h2>
+      </div>
+
+      <div class="price-cards-grid">
+        <a href="pages/category.html?price=under-25k" class="price-card">
+          <div class="price-card-icon">💛</div>
+          <div class="price-card-range">Under ₹25,000</div>
+          <div class="price-card-count">Everyday elegance</div>
+        </a>
+        <a href="pages/category.html?price=25k-50k" class="price-card">
+          <div class="price-card-icon">✨</div>
+          <div class="price-card-range">₹25,000 – ₹50,000</div>
+          <div class="price-card-count">Special occasions</div>
+        </a>
+        <a href="pages/category.html?price=50k-1l" class="price-card">
+          <div class="price-card-icon">💎</div>
+          <div class="price-card-range">₹50,000 – ₹1,00,000</div>
+          <div class="price-card-count">Premium selection</div>
+        </a>
+        <a href="pages/category.html?price=above-1l" class="price-card">
+          <div class="price-card-icon">👑</div>
+          <div class="price-card-range">₹1,00,000+</div>
+          <div class="price-card-count">Luxury collection</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY CHOOSE US ── -->
+  <section class="section" style="background:var(--white);" aria-labelledby="trust-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Our Promise</div>
+        <h2 class="section-title" id="trust-heading">Why Choose Swarnaveda</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">🏅</div>
+          <div class="trust-title">BIS Hallmarked Jewellery</div>
+          <div class="trust-desc">Every piece certified by the Bureau of Indian Standards for guaranteed purity</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">💎</div>
+          <div class="trust-title">Certified Diamonds</div>
+          <div class="trust-desc">GIA & IGI certified diamonds with full authenticity documentation</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">🔒</div>
+          <div class="trust-title">Secure Payments</div>
+          <div class="trust-desc">Bank-grade security with 256-bit SSL encryption on all transactions</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">📦</div>
+          <div class="trust-title">Insured Delivery</div>
+          <div class="trust-desc">All shipments are fully insured and delivered in tamper-proof packaging</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">🔄</div>
+          <div class="trust-title">Easy Exchange</div>
+          <div class="trust-desc">Hassle-free jewellery exchange at full gold value at any partner store</div>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">👤</div>
+          <div class="trust-title">Expert Consultation</div>
+          <div class="trust-desc">Personal jewellery advisors available online, by phone, or in-store</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STORE EXPERIENCE ── -->
+  <section class="section" style="background:var(--ivory-dark);" aria-labelledby="store-heading">
+    <div class="container-lg">
+      <div class="store-experience">
+        <div class="store-img-wrap">
+          <div class="store-bg">🏛️</div>
+        </div>
+        <div class="store-details">
+          <div class="section-eyebrow" style="justify-content:flex-start;">Our Stores</div>
+          <h2 id="store-heading" style="font-size:clamp(1.75rem,3vw,2.75rem);">Visit Our Showroom</h2>
+          <p style="margin-bottom:var(--space-2);">Experience the full splendour of our jewellery collection in person. Our expert consultants are ready to guide you through every piece.</p>
+
+          <div class="store-detail-item">
+            <div class="store-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a10 10 0 0 0-10 10c0 7 10 14 10 14s10-7 10-14A10 10 0 0 0 12 2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="store-detail-text">
+              <div class="store-detail-label">Address</div>
+              <div class="store-detail-value">45, Commercial Street, Bengaluru – 560 001</div>
+            </div>
+          </div>
+          <div class="store-detail-item">
+            <div class="store-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="store-detail-text">
+              <div class="store-detail-label">Opening Hours</div>
+              <div class="store-detail-value">Mon–Sat: 10:00 AM – 8:00 PM &nbsp;|&nbsp; Sun: 11:00 AM – 6:00 PM</div>
+            </div>
+          </div>
+          <div class="store-detail-item">
+            <div class="store-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.52 2 2 0 0 1 3.59 1.36h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.61-1.61a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="store-detail-text">
+              <div class="store-detail-label">Phone</div>
+              <div class="store-detail-value">+91 80-2234-5678</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="pages/stores.html" class="btn btn-primary">Get Directions</a>
+            <a href="pages/appointment.html" class="btn btn-secondary">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CUSTOMER REVIEWS ── -->
+  <section class="section" style="background:var(--white);" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Testimonials</div>
+        <h2 class="section-title" id="reviews-heading">What Our Customers Say</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">P</div>
+            <div>
+              <div class="review-name">Priya Sharma</div>
+              <div class="review-verified">✓ Verified Purchase</div>
+              <div class="stars" style="font-size:0.85rem;margin-top:4px;">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-body">"Absolutely stunning ring! The 22K gold quality is exceptional, and the craftsmanship is exactly as shown. Fast delivery and beautifully packaged. Will definitely order again!"</p>
+          <div class="review-product">22K Floral Garden Gold Ring · Oct 2026</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">A</div>
+            <div>
+              <div class="review-name">Ananya Reddy</div>
+              <div class="review-verified">✓ Verified Purchase</div>
+              <div class="stars" style="font-size:0.85rem;margin-top:4px;">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-body">"I purchased the temple necklace for my sister's wedding and the compliments were endless! The gold purity is certified and the intricate work is breathtaking. Worth every rupee."</p>
+          <div class="review-product">22K Temple Lakshmi Necklace · Sep 2026</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-name">Meenakshi Iyer</div>
+              <div class="review-verified">✓ Verified Purchase</div>
+              <div class="stars" style="font-size:0.85rem;margin-top:4px;">★★★★☆</div>
+            </div>
+          </div>
+          <p class="review-body">"Gorgeous emerald jhumkas! The colour of the stones is vibrant and the gold is rich. The BIS hallmark gives real confidence. Customer service was very responsive to my queries."</p>
+          <div class="review-product">22K Emerald Jhumka Earrings · Sep 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INSTAGRAM GALLERY ── -->
+  <section aria-label="Social Media Gallery">
+    <div class="section-header" style="padding-top:var(--space-10);">
+      <div class="section-eyebrow">@swarnaveda_jewels</div>
+      <h2 class="section-title">Beautiful Moments</h2>
+    </div>
+    <div class="instagram-grid">
+      <div class="instagram-item" style="background:linear-gradient(135deg,#f0d78a,#c9922a);">
+        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;">💍</div>
+        <div class="instagram-overlay"><span class="instagram-icon">📸</span></div>
+      </div>
+      <div class="instagram-item">
+        <img src="assets/images/ring.jpg" alt="Gold Ring" class="instagram-img">
+        <div class="instagram-overlay"><span class="instagram-icon">📸</span></div>
+      </div>
+      <div class="instagram-item">
+        <img src="assets/images/necklace.jpg" alt="Gold Necklace" class="instagram-img">
+        <div class="instagram-overlay"><span class="instagram-icon">📸</span></div>
+      </div>
+      <div class="instagram-item">
+        <img src="assets/images/earrings.jpg" alt="Earrings" class="instagram-img">
+        <div class="instagram-overlay"><span class="instagram-icon">📸</span></div>
+      </div>
+      <div class="instagram-item">
+        <img src="assets/images/bangle.jpg" alt="Bangles" class="instagram-img">
+        <div class="instagram-overlay"><span class="instagram-icon">📸</span></div>
+      </div>
+      <div class="instagram-item">
+        <img src="assets/images/bridal.jpg" alt="Bridal" class="instagram-img">
+        <div class="instagram-overlay"><span class="instagram-icon">📸</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWSLETTER ── -->
+  <section class="newsletter-section" aria-labelledby="newsletter-heading">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-icon">✉️</div>
+        <h2 class="newsletter-title" id="newsletter-heading">Be the First to Discover</h2>
+        <p class="newsletter-subtitle">Sign up for exclusive previews, new arrivals, and special offers on fine jewellery.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email address"
+            required
+            id="newsletter-email"
+            aria-label="Email address for newsletter">
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+        <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="logo-wordmark">Swarna<span>veda</span></div>
+      <p class="footer-desc">India's premium multi-vendor gold and diamond jewellery marketplace. Connecting discerning buyers with verified, trusted jewellery artisans since 2024.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h6>Shop</h6>
+      <div class="footer-links">
+        <a href="pages/category.html?cat=gold" class="footer-link">Gold Jewellery</a>
+        <a href="pages/category.html?cat=diamond" class="footer-link">Diamond Jewellery</a>
+        <a href="pages/bridal.html" class="footer-link">Bridal</a>
+        <a href="pages/category.html?gender=men" class="footer-link">Men</a>
+        <a href="pages/category.html?gender=women" class="footer-link">Women</a>
+        <a href="pages/category.html?gender=kids" class="footer-link">Kids</a>
+        <a href="pages/category.html?occ=gifting" class="footer-link">Gifts</a>
+        <a href="pages/new-arrivals.html" class="footer-link">New Arrivals</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h6>Customer Service</h6>
+      <div class="footer-links">
+        <a href="pages/contact.html" class="footer-link">Contact Us</a>
+        <a href="pages/track-order.html" class="footer-link">Track Order</a>
+        <a href="pages/shipping-policy.html" class="footer-link">Shipping Policy</a>
+        <a href="pages/return-policy.html" class="footer-link">Returns & Exchange</a>
+        <a href="pages/faq.html" class="footer-link">FAQs</a>
+        <a href="pages/appointment.html" class="footer-link">Book Appointment</a>
+        <a href="pages/gold-exchange.html" class="footer-link">Gold Exchange</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h6>About</h6>
+      <div class="footer-links">
+        <a href="pages/about.html" class="footer-link">About Us</a>
+        <a href="pages/about.html#story" class="footer-link">Our Story</a>
+        <a href="pages/stores.html" class="footer-link">Stores</a>
+        <a href="pages/blog.html" class="footer-link">Blog</a>
+        <a href="vendor/register.html" class="footer-link">Sell on Swarnaveda</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h6>Legal</h6>
+      <div class="footer-links">
+        <a href="pages/privacy-policy.html" class="footer-link">Privacy Policy</a>
+        <a href="pages/terms.html" class="footer-link">Terms & Conditions</a>
+        <a href="pages/shipping-policy.html" class="footer-link">Shipping Policy</a>
+        <a href="pages/return-policy.html" class="footer-link">Return Policy</a>
+      </div>
+      <h6 style="margin-top:var(--space-6);">Contact</h6>
+      <div class="footer-links">
+        <span class="footer-link">📞 1800-123-4567 (Toll Free)</span>
+        <span class="footer-link">✉ support@swarnaveda.com</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Swarnaveda Fine Jewellery Pvt. Ltd. All rights reserved.</p>
+    <div class="footer-payments">
+      <span class="payment-icon">UPI</span>
+      <span class="payment-icon">VISA</span>
+      <span class="payment-icon">MC</span>
+      <span class="payment-icon">AMEX</span>
+      <span class="payment-icon">NetB</span>
+      <span class="payment-icon">COD</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOTTOM MOBILE NAVIGATION
+     ============================================================ -->
+<nav class="bottom-mobile-nav" role="navigation" aria-label="Mobile bottom navigation">
+  <div class="bottom-nav-inner">
+    <a href="index.html" class="bottom-nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="pages/category.html" class="bottom-nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Categories</span>
+    </a>
+    <a href="#" class="bottom-nav-item" data-open-search>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span>Search</span>
+    </a>
+    <a href="pages/wishlist.html" class="bottom-nav-item" style="position:relative;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span class="action-badge wishlist-badge" style="display:none;top:2px;right:20px;">0</span>
+      <span>Wishlist</span>
+    </a>
+    <a href="pages/cart.html" class="bottom-nav-item" style="position:relative;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="action-badge cart-badge" style="display:none;top:2px;right:20px;">0</span>
+      <span>Cart</span>
+    </a>
+  </div>
+</nav>
+
+<div id="toast-container"></div>
+
+<!-- Scripts -->
+<script src="js/data.js"></script>
+<script>
+  // Render New Arrivals
+  document.addEventListener('DOMContentLoaded', function() {
+    const newArrivalsGrid = document.getElementById('new-arrivals-grid');
+    const bestsellersGrid = document.getElementById('bestsellers-grid');
+
+    if (newArrivalsGrid) {
+      const newProducts = window.products.slice(0, 4);
+      newArrivalsGrid.innerHTML = newProducts.map(p => window.renderProductCard(p)).join('');
+    }
+
+    if (bestsellersGrid) {
+      const bestProducts = window.products.filter(p => p.badge === 'bestseller' || p.rating >= 4.8).slice(0, 4);
+      bestsellersGrid.innerHTML = bestProducts.map(p => window.renderProductCard(p)).join('');
+    }
+  });
+
+  function handleNewsletter(e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletter-email').value;
+    showToast('🎉 Thank you for subscribing! Welcome to Swarnaveda.', 'success', 4000);
+    document.getElementById('newsletter-email').value = '';
+  }
+</script>
+</body>
+</html>
